@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/users', 'UserController@index');
+Route::get('/user/add', 'UserController@create');
+Route::post('/user/add', 'UserController@store');
+Route::get('/user/edit/{id}', 'UserController@edit');
+Route::post('/user/edit/{id}', 'UserController@update');
+Route::get('/user/delete/{id}', 'UserController@destroy');
